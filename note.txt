@@ -1,0 +1,21 @@
+WOLFBET APP
+
+PAGINE FATTE:
+
+- login: mobile ok, desktop ok
+- register: mobile ok, desktop ok
+- cambio password: mobile ok, desktop ok
+- scelta match: mobile ok, desktop ok
+- scommessa: mobile ok, desktop ok
+- cronologia scommesse: mobile ok, desktop ok
+- budget corrente: mobile ok, desktop ok
+- utilizzo: mobile ok, desktop ok
+- fatture: mobile ok, desktop ok
+- scelta piano: mobile ok, desktop ok
+- pagamento: mobile ok, desktop ok
+- roadmap: mobile ok, desktop ok
+
+SISTEMARE: 
+
+- testo placeholder
+- tutte le icone dell'header e capire collegamenti tra pagine

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/logo_footer.png" type="image/x-icon">
+    <script type="text/javascript">
+          function start() {
+            if (localStorage.getItem('theme') === 'theme-dark'){
+              document.getElementById('icona-tema').classList.remove("bxs-moon");
+              document.getElementById('icona-tema').classList.add("bxs-sun");
+            } else {
+              document.getElementById('icona-tema').classList.remove("bxs-sun");
+              document.getElementById('icona-tema').classList.add("bxs-moon");
+            }
+          }
+          window.onload = start;
+    </script> 
+
+    <title>Scelta match | WolfBet </title>
+</head>
+<body class="sceltamatch">
+    <section id="blur-match">
+        <!-- HEADER -->
+        <header class="navbar">
+            <a href="#" class="hidden"><i class="bx bx-home-alt-2"></i></a>
+            <img src="img/logo_footer.png" alt="">
+            <a href="#"><i class="bx bxs-grid"></i></i></a>
+        </header>
+
+        <!-- SEARCHBAR -->
+        <section class="container-searchbar">
+            <form action="" class="searchbar">
+                <button type="submit">
+                    <i class="bx bx-zoom-in"></i>
+                </button>
+                <input type="text" name="" id="" placeholder="Search by team">
+            </form>
+        </section>
+
+        <!-- FILETRS -->
+        <div class="filters">
+            <i class="bx bx-filter"></i>
+            <span>Filter by champions</span>
+        </div>
+
+        <!-- MATCH AVAILABLE -->
+        <div class="match90 cm">
+            <p class="match-p">Premiere League</p>
+        </div>
+
+        <div class="container-match-45">
+            <div class="match45 cm">
+                <p class="match-p">Serie A</p>
+            </div>
+            <div class="match45 cm">
+                <p class="match-p">Bundesliga</p>
+            </div>
+        </div>
+
+        <div class="container-match-33">
+            <div class="match33 cm">
+                <p class="match-p">La Liga</p>
+            </div>
+            <div class="match33 cm">
+                <p class="match-p">Champions League</p>
+            </div>
+            <div class="match33 cm">
+                <p class="match-p">Europa League</p>
+            </div>
+        </div>
+
+        <!-- MATCH PIU GIOCATI -->
+        <section class="container-partite">
+            <div class="filters-match">
+                <i class="bx bx-filter"></i>
+                <span>Match più giocati</span>
+            </div>
+
+            <div class="match-list">
+                <img src="img/team.png" alt="">
+                <div>
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <span>date - time</span>
+                <i class="bx bx-bell" id="icon1" onclick="changeIconBell('icon1')"></i>
+            </div>
+
+            <div class="match-list">
+                <img src="img/team.png" alt="">
+                <div>
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <span>date - time</span>
+                <i class="bx bx-bell" id="icon2" onclick="changeIconBell('icon2')"></i>
+            </div>
+
+            <div class="match-list">
+                <img src="img/team.png" alt="">
+                <div>
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <span>date - time</span>
+                <i class="bx bx-bell" id="icon3" onclick="changeIconBell('icon3')"></i>
+            </div>
+        </section>
+
+        <!-- MATCH LIVE -->
+        <section class="container-partite">
+            <div class="filters-match">
+                <i class="bx bx-filter"></i>
+                <span>Match live</span>
+            </div>
+
+            <div class="match-list">
+                <img src="img/team.png" alt="">
+                <div>
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <span>date - time</span>
+                <i class="bx bx-bell" id="icon4" onclick="changeIconBell('icon4')"></i>
+            </div>
+
+            <div class="match-list">
+                <img src="img/team.png" alt="">
+                <div>
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <span>date - time</span>
+                <i class="bx bx-bell" id="icon5" onclick="changeIconBell('icon5')"></i>
+            </div>
+
+            <div class="match-list">
+                <img src="img/team.png" alt="">
+                <div>
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <span>date - time</span>
+                <i class="bx bx-bell" id="icon6" onclick="changeIconBell('icon6')"></i>
+            </div>
+        </section>
+
+        <!-- MATCH PREFERITI -->
+        <section class="container-partite last">
+            <div class="filters-match">
+                <i class="bx bx-filter"></i>
+                <span>Match preferiti</span>
+            </div>
+
+            <div class="match-list">
+                <img src="img/team.png" alt="">
+                <div>
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <span>date - time</span>
+                <i class="bx bx-bell" id="icon7" onclick="changeIconBell('icon7')"></i>
+            </div>
+
+            <div class="match-list">
+                <img src="img/team.png" alt="">
+                <div>
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <span>date - time</span>
+                <i class="bx bx-bell" id="icon8" onclick="changeIconBell('icon8')"></i>
+            </div>
+
+            <div class="match-list">
+                <img src="img/team.png" alt="">
+                <div>
+                    <p>Team 1</p>
+                    <p>Team 2</p>
+                </div>
+                <span>date - time</span>
+                <i class="bx bx-bell" id="icon9" onclick="changeIconBell('icon9')"></i>
+            </div>
+        </section>
+
+        <!-- MENU UTENTE -->
+        <section class="menu-user" id="mUser">
+            <div class="topbar">
+                <i class="bx bx-x-circle"></i>
+                <p>Impostazioni</p>
+                <button onclick="toggleTheme()" class="btn-theme">
+                    <i id="icona-tema" class="bx bxs-sun"></i>
+                </button>
+            </div>
+
+            <div class="content">
+                <i class="bx bx-right-top-arrow-circle"></i>
+                <p>Puntate</p>
+                <i class="bx bx-coin-stack"></i>
+                <p>Budget</p>
+                <i class="bx bx-help-circle"></i>
+                <p>Guida</p>
+            </div>
+
+            <hr>
+
+            <div class="user-key">
+                <div class="user">
+                    <img src="img/profile.png" alt="">
+                    <p>Nome utente</p>
+                    <i class="bx bx-bell" id="icon10" onclick="changeIconBell('icon10')"></i>
+                    <i class="bx bx-dots-horizontal-rounded"></i>
+                </div>
+                <div class="shortcut">
+                    <i class="bx bx-key"></i>
+                    <p>Cambio password</p>
+                    <i class="bx bx-credit-card-front"></i>
+                    <p>Pagamenti</p>
+                    <i class="bx bx-log-out"></i>
+                    <p>Logout</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- POP UP HOME -->
+    <div class="container-popup" id="popup">
+        <p>Benvenuto in WolfBet!!! Per cominciare guarda i video a te dedicati per imparare tutto sulla piattaforma.</p>
+        <div class="bottom-pop">
+            <a href="utilizzo.html"><div class="button">
+                <span>Vai alla Guida</span>
+            </div></a>
+            <i class="bx bx-x-circle" id="close-pop"></i>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+
+</body>
+</html>
