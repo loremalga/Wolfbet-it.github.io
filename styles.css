@@ -11,6 +11,20 @@
     --h1-font: 36px;
     --h3-font: 20px;
     --p-font: 16px;
+
+  --bg-body-image: radial-gradient(30% 90% ellipse at bottom center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 100%);
+  --bg-body-hover: rgba(40, 40, 40, 1);
+  --bg-button: rgba(255, 255, 255, 0);
+  --bg-button-hover: rgba(255, 255, 255, 0.05);
+  --bg-button-active: rgba(255, 255, 255, 1.0);
+  --bg-mask: rgba(255, 255, 255, 0.5);
+  --bg-mask-hover: rgba(255, 255, 255, 1.0);
+  --border-button: rgba(255, 255, 255, 0.2);
+  --border-button-hover: rgba(255, 255, 255, 1.0);
+  --color-button: rgba(255, 255, 255, 0.6);
+  --color-button-hover: rgba(255, 255, 255, 1.0);
+  --color-button-active: var(--body-bg);
+  --shadow-button-hover: 0 0 0.3125rem rgba(255, 255, 255, 0.8);
 }
 
 .theme-dark {
@@ -68,8 +82,29 @@ a {
     margin-bottom: 30px;
 }
 
+.navbar.double {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.navbar.right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-items: end;
+}
+
 .navbar img {
     width: 100px;
+}
+
+.navbar a {
+    width: min-content;
 }
 
 .navbar img.logo {
@@ -193,6 +228,13 @@ a {
     margin-top: auto;
     padding-top: 50px;
     margin-bottom: 20px;
+}
+
+.footer.colorato {
+    background: var(--primary-color);
+    margin-top: auto;
+    padding: 10px 0px 40px;
+    margin-bottom: 0;
 }
 
 .footer img {
@@ -473,11 +515,6 @@ p.moreinfo {
 }
 
 /* PAGINA "SCOMMESSA" */
-
-.navbar .hidden {
-    visibility: hidden;
-}
-
 .cashin {
     display: grid;
     grid-template-columns: 40% 10% 40%;
@@ -600,13 +637,13 @@ p.moreinfo {
     font-size: 1.5rem;
 }
 
-.puntata-container span {   
+.puntata-container .button-dis {   
     color: var(--background);
 }
 
 .quote {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 60%;
     margin: 30px 20px;
     row-gap: 25px;
     align-items: center;
@@ -640,6 +677,14 @@ p.moreinfo {
 .quote input:focus-visible {
     outline: 1px solid var(--text-color);
     border-radius: 15px;
+}
+
+.quote .p-place {
+    text-align: center;
+    padding: 8px 10px;
+    background: var(--background);
+    color: var(--text-color);
+    border-radius: 15px
 }
 
 .puntata-container a {
@@ -1088,7 +1133,7 @@ p.moreinfo {
 .topbar .bx-x-circle,
 .topbar p,
 .content i,
-.content p {
+.content a {
     color: var(--text-color);
 }
 
@@ -1100,10 +1145,11 @@ p.moreinfo {
     padding: 30px;
 }
 
-.content p {
+.content a {
     font-size: var(--h3-font);
     margin-left: 20px;
     font-weight: 400;
+    width: fit-content;
 }
 
 .menu-user hr {
@@ -1151,14 +1197,15 @@ p.moreinfo {
     display: none;
 }
 
-.shortcut p {
+.shortcut a {
     font-size: var(--h3-font);
     margin-left: 20px;
     font-weight: 400;
+    width: fit-content;
 }
 
 .shortcut i,
-.shortcut p {
+.shortcut a {
     color: var(--text-color);
 }
 
@@ -1210,6 +1257,71 @@ p.moreinfo {
 
 /* ROADMAP */
 
+.head-road {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 20px;
+    padding: 0 8%;
+    background: var(--primary-color);
+}
+
+.head-road img {
+    height: 400px;
+}
+
+.button-road {
+    display: inline-block;
+    text-align: center;
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 20px;
+    transform: scale(.9);
+    transition: .5s;
+}
+
+.button-road:hover {
+    background: var(--text-color);
+    color: var(--background);
+    transform: scale(.95);
+}
+
+.btn-iscrivimi {
+    background: var(--text-color);
+    color: var(--font-family);
+    width: 100px;
+    padding: 15px 25%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    gap: 10px;
+}
+
+.btn-iscrivimi:hover {
+    background: var(--light-color);
+}
+
+.btn-iscrivimi span {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.btn-iscrivimi i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
 .menu-items {
     display: none !important;
     font-size: var(--h3-font);
@@ -1247,6 +1359,7 @@ p.moreinfo {
 
 .textroad h1 {
     text-align: center;
+    font-size: 30px;
 }
 
 .textroad p {
@@ -1254,7 +1367,6 @@ p.moreinfo {
 }
 
 .container-iscriviti {
-    border-radius: 15px;
     display: grid;
     width: 100%;
     background: var(--primary-color);
@@ -1278,9 +1390,23 @@ p.moreinfo {
 
 .iscriviti {
     width: 100%;
-    background: var(--third-color);
     border-radius: 15px;
     padding: 20px;
+}
+
+.input-privacy.roadmap {
+    margin: 10px auto;
+    width: 100%;
+    gap: 0;
+}
+
+.input-privacy.roadmap span {
+    font-size: 14px;
+}
+
+.input-privacy.roadmap input#privacy {
+    width: 15px;
+    height: 15px;
 }
 
 .iscriviti input {
@@ -1344,7 +1470,7 @@ p.moreinfo {
 }
 
 .container-roadmap {
-    margin: 40px 0;
+    margin: 50px 0;
 }
 
 .container-roadmap hr {
@@ -1429,7 +1555,7 @@ p.moreinfo {
 .avvertenze {
     color: var(--text-color);
     width: 90%;
-    margin: 30px auto;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -1441,9 +1567,10 @@ p.moreinfo {
 /* PAGINA FATTURE */
 .quote .col2 {
     text-align: right;
+    color: var(--text-color);
 }
 
-.quote span {
+.quote .quote-span {
     font-weight: 200;
     color: var(--text-color);
 }
@@ -1581,6 +1708,10 @@ p.moreinfo {
     padding: 5px;
 }
 
+.incassoText {
+    text-align: center;
+}
+
 .title-history {
     display: flex;
     width: 85%;
@@ -1626,13 +1757,10 @@ p.moreinfo {
 
 .inPartita {
     display: grid;
-    grid-template-columns: 20% 45% 35%;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 10px;
-}
-
-.inPartita img {
-    width: 50px;
+    justify-items: center;
 }
 
 .inPartita .negativo,
@@ -1690,7 +1818,9 @@ p.moreinfo {
 }
 
 .c-capitale {
-    width: 90%;
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
 }
 
 .c-dettagli p {
@@ -1724,28 +1854,29 @@ p.moreinfo {
 
 .c-capitale {
     margin: 20px 0;
-    display: grid;
-    grid-template-columns: 57% 47%;
+    display: flex;
     gap: 20px;
 }
 
 .c-capitale p {
     margin: auto;
+    width: 100%;
 }
 
 .c-checkbox {
     margin: 20px 0;
-    display: grid;
-    grid-template-columns: 51% 43%;
+    display: flex;
     gap: 20px;
-    align-items: center;
 }
 
 .check {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    gap: 10px;
     align-items: center;
+}
+
+.check p {
+    width: min-content;
 }
 
 /* CHECKBOX */
@@ -1877,6 +2008,19 @@ p.moreinfo {
         width: 80%;
         grid-template-columns: 0% 100%;
     }
+
+    .head-road {
+        grid-template-columns: 1fr;
+        padding: 40px 10px 0;
+    }
+    
+    .head-road img {
+        height: 300px;
+    }
+
+    .button-road {
+        font-size: var(--h3-font);
+    }
 }
 
 @media (min-width: 769px) {
@@ -1950,10 +2094,6 @@ p.moreinfo {
         margin: 30px auto;
     }
 
-    .quote input {
-        text-align: center;
-    }
-
     .menu-user .topbar, 
     .menu-user .content {
         padding: 30px 25%;
@@ -2002,10 +2142,9 @@ p.moreinfo {
     }
 
     .container-iscriviti {
-        /*grid-template-columns: 1fr 1fr;*/
-        width: 50%;
+        grid-template-columns: 1fr 1fr;
         margin: auto;
-        border-radius: 15px;
+        padding: 20px 60px;
     }
 
     .textIscriviti {
@@ -2041,13 +2180,13 @@ p.moreinfo {
 
     .c-capitale {
         margin: 20px 0;
-        display: grid;
-        grid-template-columns: 39% 47%;
-        gap: 90px;
+        display: flex;
+        gap: 20px;
     }
 
     .check {
-        gap: 0;
+        gap: 30px;
+        width: 100%;
     }
 
     .title-history p {
@@ -2108,9 +2247,14 @@ p.moreinfo {
         display: flex !important;
     }
 
+    .menu-items a {
+        width: fit-content;
+    }
+
     .navbar.roadmap {
         padding: 10px 80px;
         width: 80%;
+        margin-bottom: 0;
     }
 
     .container-popup {
@@ -2120,5 +2264,22 @@ p.moreinfo {
 
     .container-popup p {
        font-size: var(--h3-font);
+    }
+
+    .container-slider {
+        width: 50%;
+    }
+
+    .text-slide {
+        font-size: var(--h1-font);
+        bottom: 20px;
+    }
+
+    .partitaHistory {
+        width: 70%;
+    }
+
+    .btn-iscrivimi {
+        padding: 15px 10%;
     }
 }
